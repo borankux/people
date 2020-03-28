@@ -1,3 +1,6 @@
+# People API
+![Laravel](https://github.com/borankux/people-api/workflows/Laravel/badge.svg?branch=master)
+---
 # What is this ?
 
 Api for the Peoples project.
