@@ -1,0 +1,51 @@
+categories:
+  - name: Backend
+    skills:
+      - PHP
+      - Java
+      - Python
+      - MySQL
+      - Nodejs
+      - Perl
+      - .Net
+      - C++
+  - name: Devops
+    skills:
+      - Docker
+      - Linux
+      - Shell
+      - Kubernets
+  - name: DBA
+    skills:
+      - MySQL
+      - Oracle
+      - MSSQL
+      - SQL
+  - name: Frontend
+    skills:
+      - React
+      - Node
+      - HTML
+      - CSS
+      - JavaScript
+  - name: Data processing
+    skills:
+      - Neoral network
+      - NLP
+  - name: Medical
+    skills:
+      - Nurse
+      - Doctor
+  - name: UI/UX
+    skills:
+      - Abode Photoshop
+      - Adobe Illusturator
+      - Coreldraw
+      - Axure
+  - name: Media
+    skills:
+      - Adobe After Effect
+      - Adobe Premier
+  - name: Legal
+    skills:
+      - Lawyer
