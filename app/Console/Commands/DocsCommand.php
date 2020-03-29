@@ -51,8 +51,14 @@ class DocsCommand extends Command
             $this->info($oldPath . ' is removed !');
         }
 
+
+        $html = file_get_contents(base_path('docs/index.template'));
+        $html = str_replace('{version}', $newVersion, $html);
+
         file_put_contents(base_path('docs/swagger-ui.'.$newVersion.'.json'), json_encode($yml));
         file_put_contents(base_path('docs/swagger-ui.yml'), Yaml::dump($yml));
+        file_put_contents(base_path('docs/index.html'), $html);
+
         $this->info('New file :'. $newVersion . ' is updated');
     }
 }
