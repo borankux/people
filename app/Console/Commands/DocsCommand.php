@@ -4,6 +4,7 @@ namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\File;
+use Symfony\Component\Translation\Dumper\YamlFileDumper;
 use Symfony\Component\Yaml\Yaml;
 
 class DocsCommand extends Command
@@ -55,7 +56,7 @@ class DocsCommand extends Command
         $html = str_replace('{version}', $newVersion, $html);
 
         file_put_contents(base_path('docs/swagger-ui.'.$newVersion.'.json'), json_encode($yml));
-        file_put_contents(base_path('docs/swagger-ui.yml'), Yaml::dump($yml));
+        file_put_contents(base_path('docs/swagger-ui.yml'), Yaml::dump($yml, 10));
         file_put_contents(base_path('docs/index.html'), $html);
 
         $this->info($newVersion . ' is updated');
