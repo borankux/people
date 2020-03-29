@@ -1,7 +1,7 @@
 swagger: '2.0'
 info:
     description: 'API for the peoples project'
-    version: 30d4774
+    version: fadf01f
     title: 'Project People, gotta to know the people you work with'
     termsOfService: 'http://people.frankablat.online'
     contact:
