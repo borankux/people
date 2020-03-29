@@ -3,6 +3,7 @@
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
+use Illuminate\Support\Facades\File;
 use Symfony\Component\Yaml\Yaml;
 
 class DocsCommand extends Command
@@ -22,8 +23,6 @@ class DocsCommand extends Command
     protected $description = 'Update Swagger json from yaml';
 
 
-    protected $versionFilePath;
-
     /**
      * Create a new command instance.
      *
@@ -32,7 +31,6 @@ class DocsCommand extends Command
     public function __construct()
     {
         parent::__construct();
-        $this->versionFilePath = base_path('docs/version');
     }
 
     /**
@@ -41,24 +39,19 @@ class DocsCommand extends Command
      * @return mixed
      */
     public function handle()
-    {
-        $docsPath = base_path('docs/swagger-ui.yml');
-        $jsonPath = base_path('docs/swagger-ui.'.$this->getVersion(false).'.json');
-        $result = $yml = Yaml::parseFile($docsPath);
-        $json = json_encode($result);
-        file_put_contents($jsonPath, $json);
-        $this->info('Swagger document is updated with: '.$this->getVersion(false).'!');
-    }
+        {
+        $yml = Yaml::parseFile(base_path('docs/swagger-ui.yml'));
+        $oldVersion = $yml['info']['version'];
+        $newVersion = exec('git rev-parse --short HEAD');
+        $yml['info']['version'] = $newVersion;
 
-    public function getVersion($old = true)
-    {
-        $version = $old ? file_get_contents($this->versionFilePath) : exec(' git rev-parse --short HEAD');
-        return trim($version);
-    }
+        $oldPath = base_path('docs/swagger-ui.'.$oldVersion.'.json');
+        if(File::exists(base_path('docs/swagger-ui.'.$oldVersion.'.json'))) {
+            unlink($oldPath);
+            $this->info($oldPath . ' is removed !');
+        }
 
-    public function setVersion()
-    {
-        $version = exec('git rev-parse --short HEAD');
-        file_put_contents($this->versionFilePath, $version);
+        file_put_contents(base_path('docs/swagger-ui.'.$newVersion.'.json'), json_encode($yml));
+        $this->info('New file :'. $newVersion . ' is updated');
     }
 }
