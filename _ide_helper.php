@@ -3,7 +3,7 @@
 
 /**
  * A helper file for Laravel 5, to provide autocomplete information to your IDE
- * Generated for Laravel 7.3.0 on 2020-03-29 04:29:50.
+ * Generated for Laravel 7.3.0 on 2020-03-29 19:16:57.
  *
  * This file should not be included in your code, only analyzed by your IDE!
  *
@@ -15468,6 +15468,817 @@ namespace Dingo\Api\Facade {
         }
          
     }
+
+    /**
+     * 
+     *
+     */ 
+    class Route {
+        
+        /**
+         * An alias for calling the group method, allows a more fluent API
+         * for registering a new API version group with optional
+         * attributes and a required callback.
+         * 
+         * This method can be called without the third parameter, however,
+         * the callback should always be the last parameter.
+         *
+         * @param array|string $version
+         * @param array|callable $second
+         * @param callable $third
+         * @return void 
+         * @static 
+         */ 
+        public static function version($version, $second, $third = null)
+        {
+                        /** @var \Dingo\Api\Routing\Router $instance */
+                        $instance->version($version, $second, $third);
+        }
+        
+        /**
+         * Create a new route group.
+         *
+         * @param array $attributes
+         * @param callable $callback
+         * @return void 
+         * @static 
+         */ 
+        public static function group($attributes, $callback)
+        {
+                        /** @var \Dingo\Api\Routing\Router $instance */
+                        $instance->group($attributes, $callback);
+        }
+        
+        /**
+         * Create a new GET route.
+         *
+         * @param string $uri
+         * @param array|string|callable $action
+         * @return mixed 
+         * @static 
+         */ 
+        public static function get($uri, $action)
+        {
+                        /** @var \Dingo\Api\Routing\Router $instance */
+                        return $instance->get($uri, $action);
+        }
+        
+        /**
+         * Create a new POST route.
+         *
+         * @param string $uri
+         * @param array|string|callable $action
+         * @return mixed 
+         * @static 
+         */ 
+        public static function post($uri, $action)
+        {
+                        /** @var \Dingo\Api\Routing\Router $instance */
+                        return $instance->post($uri, $action);
+        }
+        
+        /**
+         * Create a new PUT route.
+         *
+         * @param string $uri
+         * @param array|string|callable $action
+         * @return mixed 
+         * @static 
+         */ 
+        public static function put($uri, $action)
+        {
+                        /** @var \Dingo\Api\Routing\Router $instance */
+                        return $instance->put($uri, $action);
+        }
+        
+        /**
+         * Create a new PATCH route.
+         *
+         * @param string $uri
+         * @param array|string|callable $action
+         * @return mixed 
+         * @static 
+         */ 
+        public static function patch($uri, $action)
+        {
+                        /** @var \Dingo\Api\Routing\Router $instance */
+                        return $instance->patch($uri, $action);
+        }
+        
+        /**
+         * Create a new DELETE route.
+         *
+         * @param string $uri
+         * @param array|string|callable $action
+         * @return mixed 
+         * @static 
+         */ 
+        public static function delete($uri, $action)
+        {
+                        /** @var \Dingo\Api\Routing\Router $instance */
+                        return $instance->delete($uri, $action);
+        }
+        
+        /**
+         * Create a new OPTIONS route.
+         *
+         * @param string $uri
+         * @param array|string|callable $action
+         * @return mixed 
+         * @static 
+         */ 
+        public static function options($uri, $action)
+        {
+                        /** @var \Dingo\Api\Routing\Router $instance */
+                        return $instance->options($uri, $action);
+        }
+        
+        /**
+         * Create a new route that responding to all verbs.
+         *
+         * @param string $uri
+         * @param array|string|callable $action
+         * @return mixed 
+         * @static 
+         */ 
+        public static function any($uri, $action)
+        {
+                        /** @var \Dingo\Api\Routing\Router $instance */
+                        return $instance->any($uri, $action);
+        }
+        
+        /**
+         * Create a new route with the given verbs.
+         *
+         * @param array|string $methods
+         * @param string $uri
+         * @param array|string|callable $action
+         * @return mixed 
+         * @static 
+         */ 
+        public static function match($methods, $uri, $action)
+        {
+                        /** @var \Dingo\Api\Routing\Router $instance */
+                        return $instance->match($methods, $uri, $action);
+        }
+        
+        /**
+         * Register an array of resources.
+         *
+         * @param array $resources
+         * @return void 
+         * @static 
+         */ 
+        public static function resources($resources)
+        {
+                        /** @var \Dingo\Api\Routing\Router $instance */
+                        $instance->resources($resources);
+        }
+        
+        /**
+         * Register a resource controller.
+         *
+         * @param string $name
+         * @param string $controller
+         * @param array $options
+         * @return void 
+         * @static 
+         */ 
+        public static function resource($name, $controller, $options = [])
+        {
+                        /** @var \Dingo\Api\Routing\Router $instance */
+                        $instance->resource($name, $controller, $options);
+        }
+        
+        /**
+         * Add a route to the routing adapter.
+         *
+         * @param string|array $methods
+         * @param string $uri
+         * @param string|array|callable $action
+         * @return mixed 
+         * @static 
+         */ 
+        public static function addRoute($methods, $uri, $action)
+        {
+                        /** @var \Dingo\Api\Routing\Router $instance */
+                        return $instance->addRoute($methods, $uri, $action);
+        }
+        
+        /**
+         * Dispatch a request via the adapter.
+         *
+         * @param \Dingo\Api\Http\Request $request
+         * @throws \Exception
+         * @return \Dingo\Api\Http\Response 
+         * @static 
+         */ 
+        public static function dispatch($request)
+        {
+                        /** @var \Dingo\Api\Routing\Router $instance */
+                        return $instance->dispatch($request);
+        }
+        
+        /**
+         * Gather the middleware for the given route.
+         *
+         * @param mixed $route
+         * @return array 
+         * @static 
+         */ 
+        public static function gatherRouteMiddlewares($route)
+        {
+                        /** @var \Dingo\Api\Routing\Router $instance */
+                        return $instance->gatherRouteMiddlewares($route);
+        }
+        
+        /**
+         * Set the conditional request.
+         *
+         * @param bool $conditionalRequest
+         * @return void 
+         * @static 
+         */ 
+        public static function setConditionalRequest($conditionalRequest)
+        {
+                        /** @var \Dingo\Api\Routing\Router $instance */
+                        $instance->setConditionalRequest($conditionalRequest);
+        }
+        
+        /**
+         * Get the current request instance.
+         *
+         * @return \Dingo\Api\Http\Request 
+         * @static 
+         */ 
+        public static function getCurrentRequest()
+        {
+                        /** @var \Dingo\Api\Routing\Router $instance */
+                        return $instance->getCurrentRequest();
+        }
+        
+        /**
+         * Get the current route instance.
+         *
+         * @return \Dingo\Api\Routing\Route 
+         * @static 
+         */ 
+        public static function getCurrentRoute()
+        {
+                        /** @var \Dingo\Api\Routing\Router $instance */
+                        return $instance->getCurrentRoute();
+        }
+        
+        /**
+         * Get the currently dispatched route instance.
+         *
+         * @return \Illuminate\Routing\Route 
+         * @static 
+         */ 
+        public static function current()
+        {
+                        /** @var \Dingo\Api\Routing\Router $instance */
+                        return $instance->current();
+        }
+        
+        /**
+         * Create a new route instance from an adapter route.
+         *
+         * @param array|\Illuminate\Routing\Route $route
+         * @return \Dingo\Api\Routing\Route 
+         * @static 
+         */ 
+        public static function createRoute($route)
+        {
+                        /** @var \Dingo\Api\Routing\Router $instance */
+                        return $instance->createRoute($route);
+        }
+        
+        /**
+         * Set the current route instance.
+         *
+         * @param \Dingo\Api\Routing\Route $route
+         * @return void 
+         * @static 
+         */ 
+        public static function setCurrentRoute($route)
+        {
+                        /** @var \Dingo\Api\Routing\Router $instance */
+                        $instance->setCurrentRoute($route);
+        }
+        
+        /**
+         * Determine if the router has a group stack.
+         *
+         * @return bool 
+         * @static 
+         */ 
+        public static function hasGroupStack()
+        {
+                        /** @var \Dingo\Api\Routing\Router $instance */
+                        return $instance->hasGroupStack();
+        }
+        
+        /**
+         * Get the prefix from the last group on the stack.
+         *
+         * @return string 
+         * @static 
+         */ 
+        public static function getLastGroupPrefix()
+        {
+                        /** @var \Dingo\Api\Routing\Router $instance */
+                        return $instance->getLastGroupPrefix();
+        }
+        
+        /**
+         * Get all routes registered on the adapter.
+         *
+         * @param string $version
+         * @return mixed 
+         * @static 
+         */ 
+        public static function getRoutes($version = null)
+        {
+                        /** @var \Dingo\Api\Routing\Router $instance */
+                        return $instance->getRoutes($version);
+        }
+        
+        /**
+         * Get the raw adapter routes.
+         *
+         * @return array 
+         * @static 
+         */ 
+        public static function getAdapterRoutes()
+        {
+                        /** @var \Dingo\Api\Routing\Router $instance */
+                        return $instance->getAdapterRoutes();
+        }
+        
+        /**
+         * Set the raw adapter routes.
+         *
+         * @param array $routes
+         * @return void 
+         * @static 
+         */ 
+        public static function setAdapterRoutes($routes)
+        {
+                        /** @var \Dingo\Api\Routing\Router $instance */
+                        $instance->setAdapterRoutes($routes);
+        }
+        
+        /**
+         * Get the number of routes dispatched.
+         *
+         * @return int 
+         * @static 
+         */ 
+        public static function getRoutesDispatched()
+        {
+                        /** @var \Dingo\Api\Routing\Router $instance */
+                        return $instance->getRoutesDispatched();
+        }
+        
+        /**
+         * Determine if the router has dispatched any routes.
+         *
+         * @return bool 
+         * @static 
+         */ 
+        public static function hasDispatchedRoutes()
+        {
+                        /** @var \Dingo\Api\Routing\Router $instance */
+                        return $instance->hasDispatchedRoutes();
+        }
+        
+        /**
+         * Get the current route name.
+         *
+         * @return string|null 
+         * @static 
+         */ 
+        public static function currentRouteName()
+        {
+                        /** @var \Dingo\Api\Routing\Router $instance */
+                        return $instance->currentRouteName();
+        }
+        
+        /**
+         * Alias for the "currentRouteNamed" method.
+         *
+         * @param mixed  string
+         * @return bool 
+         * @static 
+         */ 
+        public static function is()
+        {
+                        /** @var \Dingo\Api\Routing\Router $instance */
+                        return $instance->is();
+        }
+        
+        /**
+         * Determine if the current route matches a given name.
+         *
+         * @param string $name
+         * @return bool 
+         * @static 
+         */ 
+        public static function currentRouteNamed($name)
+        {
+                        /** @var \Dingo\Api\Routing\Router $instance */
+                        return $instance->currentRouteNamed($name);
+        }
+        
+        /**
+         * Get the current route action.
+         *
+         * @return string|null 
+         * @static 
+         */ 
+        public static function currentRouteAction()
+        {
+                        /** @var \Dingo\Api\Routing\Router $instance */
+                        return $instance->currentRouteAction();
+        }
+        
+        /**
+         * Alias for the "currentRouteUses" method.
+         *
+         * @param mixed  string
+         * @return bool 
+         * @static 
+         */ 
+        public static function uses()
+        {
+                        /** @var \Dingo\Api\Routing\Router $instance */
+                        return $instance->uses();
+        }
+        
+        /**
+         * Determine if the current route action matches a given action.
+         *
+         * @param string $action
+         * @return bool 
+         * @static 
+         */ 
+        public static function currentRouteUses($action)
+        {
+                        /** @var \Dingo\Api\Routing\Router $instance */
+                        return $instance->currentRouteUses($action);
+        }
+         
+    }
+
+    /**
+     * 
+     *
+     */ 
+    class API {
+        
+        /**
+         * Attach files to be uploaded.
+         *
+         * @param array $files
+         * @return \Dingo\Api\Dispatcher 
+         * @static 
+         */ 
+        public static function attach($files)
+        {
+                        /** @var \Dingo\Api\Dispatcher $instance */
+                        return $instance->attach($files);
+        }
+        
+        /**
+         * Internal request will be authenticated as the given user.
+         *
+         * @param mixed $user
+         * @return \Dingo\Api\Dispatcher 
+         * @static 
+         */ 
+        public static function be($user)
+        {
+                        /** @var \Dingo\Api\Dispatcher $instance */
+                        return $instance->be($user);
+        }
+        
+        /**
+         * Send a JSON payload in the request body.
+         *
+         * @param string|array $content
+         * @return \Dingo\Api\Dispatcher 
+         * @static 
+         */ 
+        public static function json($content)
+        {
+                        /** @var \Dingo\Api\Dispatcher $instance */
+                        return $instance->json($content);
+        }
+        
+        /**
+         * Sets the domain to be used for the request.
+         *
+         * @param string $domain
+         * @return \Dingo\Api\Dispatcher 
+         * @static 
+         */ 
+        public static function on($domain)
+        {
+                        /** @var \Dingo\Api\Dispatcher $instance */
+                        return $instance->on($domain);
+        }
+        
+        /**
+         * Return the raw response object once request is dispatched.
+         *
+         * @return \Dingo\Api\Dispatcher 
+         * @static 
+         */ 
+        public static function raw()
+        {
+                        /** @var \Dingo\Api\Dispatcher $instance */
+                        return $instance->raw();
+        }
+        
+        /**
+         * Only authenticate with the given user for a single request.
+         *
+         * @return \Dingo\Api\Dispatcher 
+         * @static 
+         */ 
+        public static function once()
+        {
+                        /** @var \Dingo\Api\Dispatcher $instance */
+                        return $instance->once();
+        }
+        
+        /**
+         * Set the version of the API for the next request.
+         *
+         * @param string $version
+         * @return \Dingo\Api\Dispatcher 
+         * @static 
+         */ 
+        public static function version($version)
+        {
+                        /** @var \Dingo\Api\Dispatcher $instance */
+                        return $instance->version($version);
+        }
+        
+        /**
+         * Set the parameters to be sent on the next API request.
+         *
+         * @param string|array $parameters
+         * @return \Dingo\Api\Dispatcher 
+         * @static 
+         */ 
+        public static function with($parameters)
+        {
+                        /** @var \Dingo\Api\Dispatcher $instance */
+                        return $instance->with($parameters);
+        }
+        
+        /**
+         * Set a header to be sent on the next API request.
+         *
+         * @param string $key
+         * @param string $value
+         * @return \Dingo\Api\Dispatcher 
+         * @static 
+         */ 
+        public static function header($key, $value)
+        {
+                        /** @var \Dingo\Api\Dispatcher $instance */
+                        return $instance->header($key, $value);
+        }
+        
+        /**
+         * Set a cookie to be sent on the next API request.
+         *
+         * @param \Symfony\Component\HttpFoundation\Cookie $cookie
+         * @return \Dingo\Api\Dispatcher 
+         * @static 
+         */ 
+        public static function cookie($cookie)
+        {
+                        /** @var \Dingo\Api\Dispatcher $instance */
+                        return $instance->cookie($cookie);
+        }
+        
+        /**
+         * Perform API GET request.
+         *
+         * @param string $uri
+         * @param string|array $parameters
+         * @return mixed 
+         * @static 
+         */ 
+        public static function get($uri, $parameters = [])
+        {
+                        /** @var \Dingo\Api\Dispatcher $instance */
+                        return $instance->get($uri, $parameters);
+        }
+        
+        /**
+         * Perform API POST request.
+         *
+         * @param string $uri
+         * @param string|array $parameters
+         * @param string $content
+         * @return mixed 
+         * @static 
+         */ 
+        public static function post($uri, $parameters = [], $content = '')
+        {
+                        /** @var \Dingo\Api\Dispatcher $instance */
+                        return $instance->post($uri, $parameters, $content);
+        }
+        
+        /**
+         * Perform API PUT request.
+         *
+         * @param string $uri
+         * @param string|array $parameters
+         * @param string $content
+         * @return mixed 
+         * @static 
+         */ 
+        public static function put($uri, $parameters = [], $content = '')
+        {
+                        /** @var \Dingo\Api\Dispatcher $instance */
+                        return $instance->put($uri, $parameters, $content);
+        }
+        
+        /**
+         * Perform API PATCH request.
+         *
+         * @param string $uri
+         * @param string|array $parameters
+         * @param string $content
+         * @return mixed 
+         * @static 
+         */ 
+        public static function patch($uri, $parameters = [], $content = '')
+        {
+                        /** @var \Dingo\Api\Dispatcher $instance */
+                        return $instance->patch($uri, $parameters, $content);
+        }
+        
+        /**
+         * Perform API DELETE request.
+         *
+         * @param string $uri
+         * @param string|array $parameters
+         * @param string $content
+         * @return mixed 
+         * @static 
+         */ 
+        public static function delete($uri, $parameters = [], $content = '')
+        {
+                        /** @var \Dingo\Api\Dispatcher $instance */
+                        return $instance->delete($uri, $parameters, $content);
+        }
+        
+        /**
+         * Get the domain.
+         *
+         * @return string 
+         * @static 
+         */ 
+        public static function getDomain()
+        {
+                        /** @var \Dingo\Api\Dispatcher $instance */
+                        return $instance->getDomain();
+        }
+        
+        /**
+         * Get the version.
+         *
+         * @return string 
+         * @static 
+         */ 
+        public static function getVersion()
+        {
+                        /** @var \Dingo\Api\Dispatcher $instance */
+                        return $instance->getVersion();
+        }
+        
+        /**
+         * Get the format.
+         *
+         * @return string 
+         * @static 
+         */ 
+        public static function getFormat()
+        {
+                        /** @var \Dingo\Api\Dispatcher $instance */
+                        return $instance->getFormat();
+        }
+        
+        /**
+         * Get the subtype.
+         *
+         * @return string 
+         * @static 
+         */ 
+        public static function getSubtype()
+        {
+                        /** @var \Dingo\Api\Dispatcher $instance */
+                        return $instance->getSubtype();
+        }
+        
+        /**
+         * Set the subtype.
+         *
+         * @param string $subtype
+         * @return void 
+         * @static 
+         */ 
+        public static function setSubtype($subtype)
+        {
+                        /** @var \Dingo\Api\Dispatcher $instance */
+                        $instance->setSubtype($subtype);
+        }
+        
+        /**
+         * Get the standards tree.
+         *
+         * @return string 
+         * @static 
+         */ 
+        public static function getStandardsTree()
+        {
+                        /** @var \Dingo\Api\Dispatcher $instance */
+                        return $instance->getStandardsTree();
+        }
+        
+        /**
+         * Set the standards tree.
+         *
+         * @param string $standardsTree
+         * @return void 
+         * @static 
+         */ 
+        public static function setStandardsTree($standardsTree)
+        {
+                        /** @var \Dingo\Api\Dispatcher $instance */
+                        $instance->setStandardsTree($standardsTree);
+        }
+        
+        /**
+         * Set the prefix.
+         *
+         * @param string $prefix
+         * @return void 
+         * @static 
+         */ 
+        public static function setPrefix($prefix)
+        {
+                        /** @var \Dingo\Api\Dispatcher $instance */
+                        $instance->setPrefix($prefix);
+        }
+        
+        /**
+         * Set the default version.
+         *
+         * @param string $version
+         * @return void 
+         * @static 
+         */ 
+        public static function setDefaultVersion($version)
+        {
+                        /** @var \Dingo\Api\Dispatcher $instance */
+                        $instance->setDefaultVersion($version);
+        }
+        
+        /**
+         * Set the default domain.
+         *
+         * @param string $domain
+         * @return void 
+         * @static 
+         */ 
+        public static function setDefaultDomain($domain)
+        {
+                        /** @var \Dingo\Api\Dispatcher $instance */
+                        $instance->setDefaultDomain($domain);
+        }
+        
+        /**
+         * Set the default format.
+         *
+         * @param string $format
+         * @return void 
+         * @static 
+         */ 
+        public static function setDefaultFormat($format)
+        {
+                        /** @var \Dingo\Api\Dispatcher $instance */
+                        $instance->setDefaultFormat($format);
+        }
+         
+    }
  
 }
 
@@ -18823,6 +19634,10 @@ namespace  {
     class Validator extends \Illuminate\Support\Facades\Validator {}
 
     class View extends \Illuminate\Support\Facades\View {}
+
+    class DingoAPi extends \Dingo\Api\Facade\API {}
+
+    class DingoRoute extends \Dingo\Api\Facade\Route {}
 
     class API extends \Dingo\Api\Facade\API {}
 

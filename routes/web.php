@@ -12,3 +12,11 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+
+$api = app('Dingo\Api\Routing\Router');
+
+$api->version('v1',['namespace' => 'App\Http\Controllers'], function($api){
+    $api->get('test', 'IndexController@index');
+});
+

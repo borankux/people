@@ -12,6 +12,6 @@ class IndexController extends BaseController
 {
     public function index()
     {
-        return $this->response->array();
+        return $this->response->accepted("good");
     }
 }
