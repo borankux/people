@@ -1,8 +1,8 @@
 swagger: '2.0'
 info:
-    description: 'API for the peoples project',
-    version: 0ba2c13
-    title: 'Project Peoples, get to know the people you work with'
+    description: 'API for the peoples project'
+    version: 30d4774
+    title: 'Project People, gotta to know the people you work with'
     termsOfService: 'http://people.frankablat.online'
     contact:
         email: mirzatsoft@gmail.com
@@ -14,7 +14,7 @@ basePath: /v2
 tags:
     -
         name: auth
-        description: 'Authentication'
+        description: Authentication
 schemes:
     - https
     - http
@@ -80,7 +80,7 @@ paths:
                     petstore_auth:
                         - 'write:pets'
                         - 'read:pets'
-                        -
+                        - null
 securityDefinitions:
     petstore_auth:
         type: oauth2
