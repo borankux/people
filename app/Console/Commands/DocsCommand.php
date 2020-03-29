@@ -44,14 +44,15 @@ class DocsCommand extends Command
         $oldVersion = $yml['info']['version'];
         $newVersion = exec('git rev-parse --short HEAD');
         $yml['info']['version'] = $newVersion;
-
         $oldPath = base_path('docs/swagger-ui.'.$oldVersion.'.json');
+        $this->warn($oldPath);
         if(File::exists(base_path('docs/swagger-ui.'.$oldVersion.'.json'))) {
             unlink($oldPath);
             $this->info($oldPath . ' is removed !');
         }
 
         file_put_contents(base_path('docs/swagger-ui.'.$newVersion.'.json'), json_encode($yml));
+        file_put_contents(base_path('docs/swagger-ui.yml'), Yaml::dump($yml));
         $this->info('New file :'. $newVersion . ' is updated');
     }
 }
