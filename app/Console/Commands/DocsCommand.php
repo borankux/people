@@ -58,6 +58,6 @@ class DocsCommand extends Command
         file_put_contents(base_path('docs/swagger-ui.yml'), Yaml::dump($yml));
         file_put_contents(base_path('docs/index.html'), $html);
 
-        $this->info('New file :'. $newVersion . ' is updated');
+        $this->info($newVersion . ' is updated');
     }
 }
