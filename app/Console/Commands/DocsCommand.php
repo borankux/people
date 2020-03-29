@@ -45,10 +45,9 @@ class DocsCommand extends Command
         $newVersion = exec('git rev-parse --short HEAD');
         $yml['info']['version'] = $newVersion;
         $oldPath = base_path('docs/swagger-ui.'.$oldVersion.'.json');
-        $this->warn($oldPath);
         if(File::exists(base_path('docs/swagger-ui.'.$oldVersion.'.json'))) {
             unlink($oldPath);
-            $this->info($oldPath . ' is removed !');
+            $this->warn($oldVersion . ' is removed !');
         }
 
 
