@@ -3,7 +3,7 @@
 
 /**
  * A helper file for Laravel 5, to provide autocomplete information to your IDE
- * Generated for Laravel 7.3.0 on 2020-03-27 20:16:17.
+ * Generated for Laravel 7.3.0 on 2020-03-29 04:25:44.
  *
  * This file should not be included in your code, only analyzed by your IDE!
  *
@@ -15118,6 +15118,359 @@ namespace Illuminate\Support {
  
 }
 
+namespace Dingo\Api\Facade { 
+
+    /**
+     * 
+     *
+     */ 
+    class API {
+        
+        /**
+         * Attach files to be uploaded.
+         *
+         * @param array $files
+         * @return \Dingo\Api\Dispatcher 
+         * @static 
+         */ 
+        public static function attach($files)
+        {
+                        /** @var \Dingo\Api\Dispatcher $instance */
+                        return $instance->attach($files);
+        }
+        
+        /**
+         * Internal request will be authenticated as the given user.
+         *
+         * @param mixed $user
+         * @return \Dingo\Api\Dispatcher 
+         * @static 
+         */ 
+        public static function be($user)
+        {
+                        /** @var \Dingo\Api\Dispatcher $instance */
+                        return $instance->be($user);
+        }
+        
+        /**
+         * Send a JSON payload in the request body.
+         *
+         * @param string|array $content
+         * @return \Dingo\Api\Dispatcher 
+         * @static 
+         */ 
+        public static function json($content)
+        {
+                        /** @var \Dingo\Api\Dispatcher $instance */
+                        return $instance->json($content);
+        }
+        
+        /**
+         * Sets the domain to be used for the request.
+         *
+         * @param string $domain
+         * @return \Dingo\Api\Dispatcher 
+         * @static 
+         */ 
+        public static function on($domain)
+        {
+                        /** @var \Dingo\Api\Dispatcher $instance */
+                        return $instance->on($domain);
+        }
+        
+        /**
+         * Return the raw response object once request is dispatched.
+         *
+         * @return \Dingo\Api\Dispatcher 
+         * @static 
+         */ 
+        public static function raw()
+        {
+                        /** @var \Dingo\Api\Dispatcher $instance */
+                        return $instance->raw();
+        }
+        
+        /**
+         * Only authenticate with the given user for a single request.
+         *
+         * @return \Dingo\Api\Dispatcher 
+         * @static 
+         */ 
+        public static function once()
+        {
+                        /** @var \Dingo\Api\Dispatcher $instance */
+                        return $instance->once();
+        }
+        
+        /**
+         * Set the version of the API for the next request.
+         *
+         * @param string $version
+         * @return \Dingo\Api\Dispatcher 
+         * @static 
+         */ 
+        public static function version($version)
+        {
+                        /** @var \Dingo\Api\Dispatcher $instance */
+                        return $instance->version($version);
+        }
+        
+        /**
+         * Set the parameters to be sent on the next API request.
+         *
+         * @param string|array $parameters
+         * @return \Dingo\Api\Dispatcher 
+         * @static 
+         */ 
+        public static function with($parameters)
+        {
+                        /** @var \Dingo\Api\Dispatcher $instance */
+                        return $instance->with($parameters);
+        }
+        
+        /**
+         * Set a header to be sent on the next API request.
+         *
+         * @param string $key
+         * @param string $value
+         * @return \Dingo\Api\Dispatcher 
+         * @static 
+         */ 
+        public static function header($key, $value)
+        {
+                        /** @var \Dingo\Api\Dispatcher $instance */
+                        return $instance->header($key, $value);
+        }
+        
+        /**
+         * Set a cookie to be sent on the next API request.
+         *
+         * @param \Symfony\Component\HttpFoundation\Cookie $cookie
+         * @return \Dingo\Api\Dispatcher 
+         * @static 
+         */ 
+        public static function cookie($cookie)
+        {
+                        /** @var \Dingo\Api\Dispatcher $instance */
+                        return $instance->cookie($cookie);
+        }
+        
+        /**
+         * Perform API GET request.
+         *
+         * @param string $uri
+         * @param string|array $parameters
+         * @return mixed 
+         * @static 
+         */ 
+        public static function get($uri, $parameters = [])
+        {
+                        /** @var \Dingo\Api\Dispatcher $instance */
+                        return $instance->get($uri, $parameters);
+        }
+        
+        /**
+         * Perform API POST request.
+         *
+         * @param string $uri
+         * @param string|array $parameters
+         * @param string $content
+         * @return mixed 
+         * @static 
+         */ 
+        public static function post($uri, $parameters = [], $content = '')
+        {
+                        /** @var \Dingo\Api\Dispatcher $instance */
+                        return $instance->post($uri, $parameters, $content);
+        }
+        
+        /**
+         * Perform API PUT request.
+         *
+         * @param string $uri
+         * @param string|array $parameters
+         * @param string $content
+         * @return mixed 
+         * @static 
+         */ 
+        public static function put($uri, $parameters = [], $content = '')
+        {
+                        /** @var \Dingo\Api\Dispatcher $instance */
+                        return $instance->put($uri, $parameters, $content);
+        }
+        
+        /**
+         * Perform API PATCH request.
+         *
+         * @param string $uri
+         * @param string|array $parameters
+         * @param string $content
+         * @return mixed 
+         * @static 
+         */ 
+        public static function patch($uri, $parameters = [], $content = '')
+        {
+                        /** @var \Dingo\Api\Dispatcher $instance */
+                        return $instance->patch($uri, $parameters, $content);
+        }
+        
+        /**
+         * Perform API DELETE request.
+         *
+         * @param string $uri
+         * @param string|array $parameters
+         * @param string $content
+         * @return mixed 
+         * @static 
+         */ 
+        public static function delete($uri, $parameters = [], $content = '')
+        {
+                        /** @var \Dingo\Api\Dispatcher $instance */
+                        return $instance->delete($uri, $parameters, $content);
+        }
+        
+        /**
+         * Get the domain.
+         *
+         * @return string 
+         * @static 
+         */ 
+        public static function getDomain()
+        {
+                        /** @var \Dingo\Api\Dispatcher $instance */
+                        return $instance->getDomain();
+        }
+        
+        /**
+         * Get the version.
+         *
+         * @return string 
+         * @static 
+         */ 
+        public static function getVersion()
+        {
+                        /** @var \Dingo\Api\Dispatcher $instance */
+                        return $instance->getVersion();
+        }
+        
+        /**
+         * Get the format.
+         *
+         * @return string 
+         * @static 
+         */ 
+        public static function getFormat()
+        {
+                        /** @var \Dingo\Api\Dispatcher $instance */
+                        return $instance->getFormat();
+        }
+        
+        /**
+         * Get the subtype.
+         *
+         * @return string 
+         * @static 
+         */ 
+        public static function getSubtype()
+        {
+                        /** @var \Dingo\Api\Dispatcher $instance */
+                        return $instance->getSubtype();
+        }
+        
+        /**
+         * Set the subtype.
+         *
+         * @param string $subtype
+         * @return void 
+         * @static 
+         */ 
+        public static function setSubtype($subtype)
+        {
+                        /** @var \Dingo\Api\Dispatcher $instance */
+                        $instance->setSubtype($subtype);
+        }
+        
+        /**
+         * Get the standards tree.
+         *
+         * @return string 
+         * @static 
+         */ 
+        public static function getStandardsTree()
+        {
+                        /** @var \Dingo\Api\Dispatcher $instance */
+                        return $instance->getStandardsTree();
+        }
+        
+        /**
+         * Set the standards tree.
+         *
+         * @param string $standardsTree
+         * @return void 
+         * @static 
+         */ 
+        public static function setStandardsTree($standardsTree)
+        {
+                        /** @var \Dingo\Api\Dispatcher $instance */
+                        $instance->setStandardsTree($standardsTree);
+        }
+        
+        /**
+         * Set the prefix.
+         *
+         * @param string $prefix
+         * @return void 
+         * @static 
+         */ 
+        public static function setPrefix($prefix)
+        {
+                        /** @var \Dingo\Api\Dispatcher $instance */
+                        $instance->setPrefix($prefix);
+        }
+        
+        /**
+         * Set the default version.
+         *
+         * @param string $version
+         * @return void 
+         * @static 
+         */ 
+        public static function setDefaultVersion($version)
+        {
+                        /** @var \Dingo\Api\Dispatcher $instance */
+                        $instance->setDefaultVersion($version);
+        }
+        
+        /**
+         * Set the default domain.
+         *
+         * @param string $domain
+         * @return void 
+         * @static 
+         */ 
+        public static function setDefaultDomain($domain)
+        {
+                        /** @var \Dingo\Api\Dispatcher $instance */
+                        $instance->setDefaultDomain($domain);
+        }
+        
+        /**
+         * Set the default format.
+         *
+         * @param string $format
+         * @return void 
+         * @static 
+         */ 
+        public static function setDefaultFormat($format)
+        {
+                        /** @var \Dingo\Api\Dispatcher $instance */
+                        $instance->setDefaultFormat($format);
+        }
+         
+    }
+ 
+}
+
 namespace Facade\Ignition\Facades { 
 
     /**
@@ -15377,6 +15730,185 @@ namespace Facade\Ignition\Facades {
         {
                         /** @var \Facade\FlareClient\Flare $instance */
                         return $instance->group($groupName, $properties);
+        }
+         
+    }
+ 
+}
+
+namespace Orangehill\Iseed\Facades { 
+
+    /**
+     * 
+     *
+     */ 
+    class Iseed {
+        
+        /**
+         * 
+         *
+         * @static 
+         */ 
+        public static function readStubFile($file)
+        {
+                        /** @var \Orangehill\Iseed\Iseed $instance */
+                        return $instance->readStubFile($file);
+        }
+        
+        /**
+         * Generates a seed file.
+         *
+         * @param string $table
+         * @param string $prefix
+         * @param string $suffix
+         * @param string $database
+         * @param int $max
+         * @param string $prerunEvent
+         * @param string $postunEvent
+         * @return bool 
+         * @throws Orangehill\Iseed\TableNotFoundException
+         * @static 
+         */ 
+        public static function generateSeed($table, $prefix = null, $suffix = null, $database = null, $max = 0, $chunkSize = 0, $exclude = null, $prerunEvent = null, $postrunEvent = null, $dumpAuto = true, $indexed = true, $orderBy = null, $direction = 'ASC')
+        {
+                        /** @var \Orangehill\Iseed\Iseed $instance */
+                        return $instance->generateSeed($table, $prefix, $suffix, $database, $max, $chunkSize, $exclude, $prerunEvent, $postrunEvent, $dumpAuto, $indexed, $orderBy, $direction);
+        }
+        
+        /**
+         * Get a seed folder path
+         *
+         * @return string 
+         * @static 
+         */ 
+        public static function getSeedPath()
+        {
+                        /** @var \Orangehill\Iseed\Iseed $instance */
+                        return $instance->getSeedPath();
+        }
+        
+        /**
+         * Get the Data
+         *
+         * @param string $table
+         * @return Array 
+         * @static 
+         */ 
+        public static function getData($table, $max, $exclude = null, $orderBy = null, $direction = 'ASC')
+        {
+                        /** @var \Orangehill\Iseed\Iseed $instance */
+                        return $instance->getData($table, $max, $exclude, $orderBy, $direction);
+        }
+        
+        /**
+         * Repacks data read from the database
+         *
+         * @param array|object $data
+         * @return array 
+         * @static 
+         */ 
+        public static function repackSeedData($data)
+        {
+                        /** @var \Orangehill\Iseed\Iseed $instance */
+                        return $instance->repackSeedData($data);
+        }
+        
+        /**
+         * Checks if a database table exists
+         *
+         * @param string $table
+         * @return boolean 
+         * @static 
+         */ 
+        public static function hasTable($table)
+        {
+                        /** @var \Orangehill\Iseed\Iseed $instance */
+                        return $instance->hasTable($table);
+        }
+        
+        /**
+         * Generates a seed class name (also used as a filename)
+         *
+         * @param string $table
+         * @param string $prefix
+         * @param string $suffix
+         * @return string 
+         * @static 
+         */ 
+        public static function generateClassName($table, $prefix = null, $suffix = null)
+        {
+                        /** @var \Orangehill\Iseed\Iseed $instance */
+                        return $instance->generateClassName($table, $prefix, $suffix);
+        }
+        
+        /**
+         * Get the path to the stub file.
+         *
+         * @return string 
+         * @static 
+         */ 
+        public static function getStubPath()
+        {
+                        /** @var \Orangehill\Iseed\Iseed $instance */
+                        return $instance->getStubPath();
+        }
+        
+        /**
+         * Populate the place-holders in the seed stub.
+         *
+         * @param string $class
+         * @param string $stub
+         * @param string $table
+         * @param string $data
+         * @param int $chunkSize
+         * @param string $prerunEvent
+         * @param string $postunEvent
+         * @return string 
+         * @static 
+         */ 
+        public static function populateStub($class, $stub, $table, $data, $chunkSize = null, $prerunEvent = null, $postrunEvent = null, $indexed = true)
+        {
+                        /** @var \Orangehill\Iseed\Iseed $instance */
+                        return $instance->populateStub($class, $stub, $table, $data, $chunkSize, $prerunEvent, $postrunEvent, $indexed);
+        }
+        
+        /**
+         * Create the full path name to the seed file.
+         *
+         * @param string $name
+         * @param string $path
+         * @return string 
+         * @static 
+         */ 
+        public static function getPath($name, $path)
+        {
+                        /** @var \Orangehill\Iseed\Iseed $instance */
+                        return $instance->getPath($name, $path);
+        }
+        
+        /**
+         * Cleans the iSeed section
+         *
+         * @return bool 
+         * @static 
+         */ 
+        public static function cleanSection()
+        {
+                        /** @var \Orangehill\Iseed\Iseed $instance */
+                        return $instance->cleanSection();
+        }
+        
+        /**
+         * Updates the DatabaseSeeder file's run method (kudoz to: https://github.com/JeffreyWay/Laravel-4-Generators)
+         *
+         * @param string $className
+         * @return bool 
+         * @static 
+         */ 
+        public static function updateDatabaseSeederRunMethod($className)
+        {
+                        /** @var \Orangehill\Iseed\Iseed $instance */
+                        return $instance->updateDatabaseSeederRunMethod($className);
         }
          
     }
@@ -18292,7 +18824,11 @@ namespace  {
 
     class View extends \Illuminate\Support\Facades\View {}
 
+    class API extends \Dingo\Api\Facade\API {}
+
     class Flare extends \Facade\Ignition\Facades\Flare {}
+
+    class Iseed extends \Orangehill\Iseed\Facades\Iseed {}
  
 }
 

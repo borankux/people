@@ -3,12 +3,10 @@
 namespace App\Models;
 
 use App\Models\TimeFrame;
-use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
-use Phalcon\Html\Helper\Label;
 
 /**
  * App\Models\User
@@ -89,14 +87,6 @@ class User extends Authenticatable
     public function skills()
     {
         return $this->hasManyThrough(Skill::class, SkillSet::class, 'user_id', 'id', null, 'skill_id');
-    }
-
-    /**
-     * @return HasMany
-     */
-    public function labels()
-    {
-        return $this->hasMany(Label::class);
     }
 
     /**

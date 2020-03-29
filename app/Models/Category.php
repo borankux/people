@@ -19,6 +19,8 @@ use Illuminate\Database\Eloquent\Model;
  * @mixin \Eloquent
  * @property string $name
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Category whereName($value)
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Skill[] $skills
+ * @property-read int|null $skills_count
  */
 class Category extends Model
 {

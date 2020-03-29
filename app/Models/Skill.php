@@ -24,6 +24,8 @@ use Illuminate\Database\Eloquent\Model;
  * @property-read int|null $users_count
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Skill whereCatId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Skill whereName($value)
+ * @property int|null $category_id
+ * @method static \Illuminate\Database\Eloquent\Builder|\App\Models\Skill whereCategoryId($value)
  */
 class Skill extends Model
 {
