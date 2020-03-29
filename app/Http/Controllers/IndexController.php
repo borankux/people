@@ -12,6 +12,6 @@ class IndexController extends BaseController
 {
     public function index()
     {
-        return $this->response->accepted(User::first());
+        return $this->response->array();
     }
 }
